@@ -137,7 +137,7 @@ public class DBHandler extends Configs {
     }
 
     public void addStatVote2(int id, int stat) throws SQLException, ClassNotFoundException {
-        String select = "UPDATE " + Const.USER_TABLE2 +  " SET " + Const.VOTE_A3STAT + "=?" + " WHERE " + Const.VOTE_ID + "=?"  ;
+        String select = "UPDATE " + Const.USER_TABLE2 +  " SET " + Const.VOTE_A2STAT + "=?" + " WHERE " + Const.VOTE_ID + "=?"  ;
         PreparedStatement prSt = getDbConnection().prepareStatement(select);
         prSt.setInt(1, stat);
         prSt.setInt(2, id);
